@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from './store'; // Adjust path as needed
-import './Veg.css'; // Reuse the same styling
+import './veg.css'; // Reuse the same styling
 
 function NonVeg() {
   const dispatch = useDispatch();
