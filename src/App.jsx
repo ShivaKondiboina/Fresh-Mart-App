@@ -3,7 +3,8 @@ import { BrowserRouter, Link, Route, Routes, Navigate } from 'react-router-dom';
 
 import Home from './Home';
 import Veg from './Veg';
-import NonVeg from './NonVeg'; // ✅ Add this line to fix your issue
+import NonVeg from './NonVeg'; // ✅ Add this line at the top
+
 
 import Cart from './Cart';
 import Order from './Order';
@@ -51,7 +52,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/veg" element={<Veg />} />
-        <Route path="/NonVeg" element={<NonVeg/>} />
+        <Route path="/NonVeg" element={<NonVeg/>}/>
         <Route path="/milk" element={<Milk />} />
         <Route path="/chocolate" element={<Chocolate/>}/>
         <Route path="/womanDress" element={<WomanDress />} />
