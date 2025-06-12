@@ -1,18 +1,15 @@
 import './App.css';
 import { BrowserRouter, Link, Route, Routes, Navigate } from 'react-router-dom';
 
-// Page Components
 import Home from './Home';
 import Veg from './Veg';
-import NonVeg from './NonVeg';
-
+import NonVeg from './NonVeg'; // ✅ Add this line to fix your issue
 
 import Cart from './Cart';
 import Order from './Order';
 import ContactUs from './ContactUs';
 import AboutUs from './AboutUs';
 import NotFound from './NotFound';
- 
 import Milk from './Milk';
 import Login from './Login';
 import Register from './Register';
@@ -20,6 +17,7 @@ import Profile from './Profile';
 import MenDress from './menDress';
 import Chocolate from './Chacolate';
 import WomanDress from './womenDress';
+
  // ✅ Corrected capitalization
 
 function App() {
@@ -34,7 +32,7 @@ function App() {
         <nav className="nav-links">
           <Link to="/home">🏠 Home</Link>
           <Link to="/veg">🥦 Veg</Link>
-          <Link to="/nonVeg">🍗 NonVeg</Link>
+          <Link to="/NonVeg">🍗 NonVeg</Link>
           <Link to="/milk">🥛 Milk</Link>
           <Link to="/chocolate">🍫 Chocolate</Link>
           <Link to="/womanDress">👗 Woman Dresses</Link>
@@ -53,7 +51,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/veg" element={<Veg />} />
-        <Route path="/nonVeg" element={<NonVeg />} />
+        <Route path="/NonVeg" element={<NonVeg/>} />
         <Route path="/milk" element={<Milk />} />
         <Route path="/chocolate" element={<Chocolate/>}/>
         <Route path="/womanDress" element={<WomanDress />} />
