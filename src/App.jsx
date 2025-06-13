@@ -5,8 +5,7 @@ import { BrowserRouter, Link, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './Home';
 import Veg from './Veg'; // ✅ Missing import added
  
-
-import MenDress from './MenDress';
+ 
 import Cart from './Cart';
 import Order from './Order';
 import ContactUs from './ContactUs';
@@ -41,7 +40,7 @@ function App() {
           <Link to="/milk">🥛 Milk</Link>
           <Link to="/chocolate">🍫 Chocolate</Link>
           <Link to="/womanDress">👗 Woman Dresses</Link>
-          <Link to="/menDress">👔 Men Dress</Link>
+           
           <Link to="/cart">🛒 Cart</Link>
           <Link to="/order">📦 Order</Link>
           <Link to="/contactUs">📞 Contact Us</Link>
@@ -61,7 +60,7 @@ function App() {
         <Route path="/milk" element={<Milk />} />
         <Route path="/chocolate" element={<Chocolate/>} />
         <Route path="/womanDress" element={<WomanDress />} />
-        <Route path="/menDress" element={<MenDress />} />
+         
         <Route path="/cart" element={<Cart />} />
         <Route path="/order" element={<Order />} />
         <Route path="/contactUs" element={<ContactUs />} />
