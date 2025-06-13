@@ -26,6 +26,10 @@ function Home() {
           <img src="/images/veg.jpeg" alt="Veg" />
           <p>Veg</p>
         </Link>
+        <Link to="/NonVeg" className="home-card">
+          <img src="/images/mutton roghan josh.jpeg" alt="NonVeg" />
+          <p>NonVeg</p>
+        </Link>
          
         <Link to="/milk" className="home-card">
           <img src="/images/milk.jpeg" alt="Milk" />

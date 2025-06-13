@@ -19,6 +19,8 @@ import Register from './Register';
 import Profile from './Profile';
 import WomanDress from './womenDress';
 import Chocolate from './Chocolate';
+import NonVeg from './nonveg';
+
  
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
         <nav className="nav-links">
           <Link to="/home">🏠 Home</Link>
           <Link to="/veg">🥦 Veg</Link>
+          <Link to='/NonVeg'>🍗 NonVeg</Link>
+
            
           <Link to="/milk">🥛 Milk</Link>
           <Link to="/chocolate">🍫 Chocolate</Link>
@@ -52,6 +56,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/veg" element={<Veg />} />
+        <Route path="/NonVeg" element={<NonVeg/>} />
        
         <Route path="/milk" element={<Milk />} />
         <Route path="/chocolate" element={<Chocolate/>} />
