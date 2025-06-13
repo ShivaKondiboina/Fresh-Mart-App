@@ -14,7 +14,15 @@ function NonVeg() {
         {nonVegProducts.length > 0 ? (
           nonVegProducts.map((product, index) => (
             <div className="veg-card" key={index}>
-              <img src={product.image} alt={product.name} className="veg-image" />
+              <img
+                src={product.image}
+                alt={product.name}
+                className="veg-image"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/default-nonveg.jpg"; // fallback image
+                }}
+              />
               <h3 className="veg-name">{product.name}</h3>
               <p className="veg-price">₹{product.price.toFixed(2)}</p>
               <button className="veg-button" onClick={() => dispatch(addToCart(product))}>
