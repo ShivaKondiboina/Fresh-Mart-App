@@ -4,7 +4,7 @@ import { BrowserRouter, Link, Route, Routes, Navigate } from 'react-router-dom';
 // Page Components
 import Home from './Home';
 import Veg from './Veg'; // ✅ Missing import added
-import NonVeg from './NonVeg'; // ✅ Missing import added
+ 
 
 import MenDress from './MenDress';
 import Cart from './Cart';
@@ -33,7 +33,7 @@ function App() {
         <nav className="nav-links">
           <Link to="/home">🏠 Home</Link>
           <Link to="/veg">🥦 Veg</Link>
-          <Link to="/nonVeg">🍗 NonVeg</Link>
+           
           <Link to="/milk">🥛 Milk</Link>
           <Link to="/chocolate">🍫 Chocolate</Link>
           <Link to="/womanDress">👗 Woman Dresses</Link>
@@ -52,7 +52,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/veg" element={<Veg />} />
-        <Route path="/nonVeg" element={<NonVeg />} />
+       
         <Route path="/milk" element={<Milk />} />
         <Route path="/chocolate" element={<Chocolate/>} />
         <Route path="/womanDress" element={<WomanDress />} />
