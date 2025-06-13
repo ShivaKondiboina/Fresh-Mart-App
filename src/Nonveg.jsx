@@ -1,15 +1,18 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from './store';
-import './veg.css';
+import './veg.css'; 
 
 function NonVeg() {
   const dispatch = useDispatch();
-  const nonVegProducts = useSelector((state) => state.products.nonVeg || []);
+
+  // Safely access nonVegProducts from Redux state
+  const nonVegProducts = useSelector((state) => state.products?.nonVeg || []);
 
   return (
-    <div className="veg-container">
+    <div className="veg-container"> 
       <h1 className="veg-title">🍗 Non-Veg Dishes: Tasty and Spicy!</h1>
+
       <div className="veg-list">
         {nonVegProducts.length > 0 ? (
           nonVegProducts.map((product, index) => (
@@ -20,12 +23,15 @@ function NonVeg() {
                 className="veg-image"
                 onError={(e) => {
                   e.target.onerror = null;
-                  e.target.src = "/default-nonveg.jpg"; // fallback image
+                  e.target.src = '/default-nonveg.jpg'; // ✅ Must be in `public/` folder
                 }}
               />
               <h3 className="veg-name">{product.name}</h3>
               <p className="veg-price">₹{product.price.toFixed(2)}</p>
-              <button className="veg-button" onClick={() => dispatch(addToCart(product))}>
+              <button
+                className="veg-button"
+                onClick={() => dispatch(addToCart(product))}
+              >
                 ADD TO CART
               </button>
             </div>
